@@ -28,7 +28,7 @@ a { color: inherit; }
 .primary-nav .nav-cta:hover { color: white; background: var(--red-dark); }
 .menu-toggle { display: none; border: 0; background: none; padding: 8px; }
 .menu-toggle span { display: block; width: 25px; height: 2px; margin: 5px; background: white; }
-.hero { min-height: 660px; position: relative; display: flex; align-items: center; color: white; background: #17181b url("assets/gunsmith-workshop.png") center 40% / cover no-repeat; overflow: hidden; }
+.hero { min-height: 660px; position: relative; display: flex; align-items: center; color: white; background: #17181b url("gunsmith-workshop.png") center 40% / cover no-repeat; overflow: hidden; }
 .hero-shade { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10,11,13,.94) 0%, rgba(10,11,13,.78) 45%, rgba(10,11,13,.22) 100%), linear-gradient(0deg, rgba(10,11,13,.65), transparent 45%); }
 .hero-content { position: relative; z-index: 1; padding-block: 100px 130px; }
 .eyebrow { margin: 0 0 13px; color: #c9c9c9; text-transform: uppercase; font-size: .72rem; font-weight: 700; letter-spacing: .2em; }
@@ -73,7 +73,7 @@ h1 span { color: #ef3b45; }
 .service-card li { padding: 3px 0; }
 .service-card li::marker { color: var(--red); }
 .feature-section { display: grid; grid-template-columns: 1fr 1fr 1fr; min-height: 390px; background: var(--ink); color: white; }
-.feature-photo { background: url("assets/hunter.png") center / cover no-repeat; min-height: 360px; }
+.feature-photo { background: url("hunter.png") center / cover no-repeat; min-height: 360px; }
 .feature-content { align-self: center; padding: 55px 9%; }
 .feature-content h2 { font-size: clamp(2.4rem, 4vw, 3.5rem); }
 .feature-content p:last-child { color: #c6c7c9; }
@@ -92,7 +92,7 @@ h1 span { color: #ef3b45; }
 .range-copy p:not(.eyebrow) { color: var(--muted); }
 .range-note { margin-top: 28px; padding-top: 20px; border-top: 1px solid #d5d5d1; font-family: var(--heading); font-size: 1.6rem; text-transform: uppercase; }
 .range-note strong { color: var(--red); }
-.quote-section { min-height: 300px; display: grid; place-items: center; padding: 60px 24px; background: linear-gradient(rgba(10,11,13,.78),rgba(10,11,13,.85)), url("assets/ammunition-banner.png") center / cover no-repeat; color: white; text-align: center; }
+.quote-section { min-height: 300px; display: grid; place-items: center; padding: 60px 24px; background: linear-gradient(rgba(10,11,13,.78),rgba(10,11,13,.85)), url("ammunition-banner.png") center / cover no-repeat; color: white; text-align: center; }
 .quote-overlay { max-width: 780px; }
 .quote-section blockquote { margin: 0 0 18px; font-family: var(--heading); font-size: clamp(1.6rem, 3vw, 2.4rem); line-height: 1.2; }
 .quote-section p { color: #ddd; font-size: .85rem; font-weight: 700; }
