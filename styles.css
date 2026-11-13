@@ -175,7 +175,6 @@ h1 span { color: #75aef0; }
 .back-top:hover { color: #75aef0; }
 @media (max-width: 900px) {
   .nav-wrap { min-height: 86px; gap: 16px; }
-  .brand-logo { width: 180px; max-height: 70px; }
   .primary-nav { gap: clamp(10px, 1.5vw, 16px); }
   .primary-nav a { font-size: .70rem; }
   .primary-nav .nav-cta { padding: 9px 12px; }
@@ -190,6 +189,11 @@ h1 span { color: #75aef0; }
   .options-grid { gap: 22px; }
   .contact-wrap { gap: 40px; }
 }
+/* Reduce the logo only on narrower tablet-sized layouts. */
+@media (max-width: 768px) {
+  .brand-logo { width: 180px; max-height: 70px; }
+}
+
 @media (max-width: 680px) {
   .container { width: min(100% - 36px, 1160px); }
   .nav-wrap { min-height: 72px; }
