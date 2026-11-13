@@ -162,3 +162,95 @@ h1 span { color: #75aef0; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+
+
+/* ==========================================
+   OPTICS & ACCURACY — FINAL LAYOUT CORRECTION
+   ========================================== */
+
+/* DESKTOP: Hunter | Text | Target */
+.feature-section {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    min-height: 420px !important;
+    width: 100%;
+}
+
+.feature-section > .feature-photo,
+.feature-section > .feature-target {
+    width: 100%;
+    height: 420px !important;
+    min-height: 420px !important;
+    max-height: 420px !important;
+}
+
+.feature-section > .feature-photo {
+    background-image: url("hunter.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.feature-section > .feature-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    min-width: 0;
+    padding: 35px 25px;
+    text-align: center;
+}
+
+.feature-section > .feature-target {
+    display: flex !important;
+    align-items: stretch;
+    justify-content: stretch;
+    padding: 0 !important;
+    overflow: hidden;
+}
+
+.feature-section > .feature-target img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* MOBILE AND TABLET: Stack images and text */
+@media (max-width: 900px) {
+    .feature-section {
+        grid-template-columns: 1fr !important;
+    }
+
+    .feature-section > .feature-photo,
+    .feature-section > .feature-target {
+        width: 100%;
+        height: 300px !important;
+        min-height: 300px !important;
+        max-height: 300px !important;
+    }
+
+    .feature-section > .feature-content {
+        padding: 40px 25px;
+    }
+
+    .feature-section > .feature-target {
+        display: flex !important;
+        padding: 0 !important;
+    }
+}
+
+@media (max-width: 680px) {
+    .feature-section > .feature-photo,
+    .feature-section > .feature-target {
+        height: 260px !important;
+        min-height: 260px !important;
+        max-height: 260px !important;
+    }
+}
