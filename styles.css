@@ -19,9 +19,10 @@ a { color: inherit; }
 .skip-link { position: absolute; top: -50px; left: 12px; z-index: 1000; padding: 10px 14px; background: white; color: black; }
 .skip-link:focus { top: 12px; }
 .site-header { position: sticky; top: 0; z-index: 50; background: rgba(16,17,20,.97); border-bottom: 1px solid rgba(255,255,255,.09); }
-.nav-wrap { min-height: 82px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
-.brand img { width: 174px; max-height: 65px; object-fit: contain; }
-.primary-nav { display: flex; align-items: center; gap: 34px; }
+.nav-wrap { min-height: 94px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+.brand { display: flex; align-items: center; flex: 0 0 auto; }
+.brand-logo { display: block; width: 220px; max-height: 78px; object-fit: contain; }
+.primary-nav { display: flex; align-items: center; gap: clamp(14px, 1.8vw, 26px); flex: 0 1 auto; white-space: nowrap; }
 .primary-nav a { color: #f7f7f7; text-decoration: none; text-transform: uppercase; font-size: .78rem; font-weight: 700; letter-spacing: .1em; transition: color .2s; }
 .primary-nav a:hover { color: #75aef0; }
 .primary-nav .nav-cta { padding: 11px 18px; border: 1px solid var(--red); background: var(--red); }
@@ -173,6 +174,11 @@ h1 span { color: #75aef0; }
 .back-top { color: white; text-decoration: none; font-size: .8rem; font-weight: 700; }
 .back-top:hover { color: #75aef0; }
 @media (max-width: 900px) {
+  .nav-wrap { min-height: 86px; gap: 16px; }
+  .brand-logo { width: 180px; max-height: 70px; }
+  .primary-nav { gap: clamp(10px, 1.5vw, 16px); }
+  .primary-nav a { font-size: .70rem; }
+  .primary-nav .nav-cta { padding: 9px 12px; }
   .split { gap: 45px; }
   .trust-grid { grid-template-columns: repeat(2,1fr); padding-block: 17px; }
   .feature-section {
@@ -187,7 +193,7 @@ h1 span { color: #75aef0; }
 @media (max-width: 680px) {
   .container { width: min(100% - 36px, 1160px); }
   .nav-wrap { min-height: 72px; }
-  .brand img { width: 145px; }
+  .brand-logo { width: 145px; max-height: 65px; }
   .menu-toggle { display: block; cursor: pointer; }
   .primary-nav { display: none; position: absolute; top: 72px; left: 0; right: 0; padding: 18px 24px 24px; background: #101114; flex-direction: column; align-items: stretch; gap: 0; }
   .primary-nav.open { display: flex; }
@@ -223,50 +229,4 @@ h1 span { color: #75aef0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
-}
-
-/* ==========================================
-   HEADER LOGO — LARGER DESKTOP DISPLAY - UPDATE
-   ========================================== */
-
-.brand {
-    flex-shrink: 0;
-}
-
-.brand img {
-    width: 220px;
-    max-height: 78px;
-    object-fit: contain;
-}
-
-.nav-wrap {
-    min-height: 94px;
-}
-
-.primary-nav {
-    gap: clamp(16px, 2.2vw, 30px);
-}
-
-/* Slightly smaller logo on tablets */
-@media (max-width: 900px) {
-    .brand img {
-        width: 190px;
-        max-height: 70px;
-    }
-
-    .nav-wrap {
-        min-height: 86px;
-    }
-}
-
-/* Preserve existing mobile logo sizing */
-@media (max-width: 680px) {
-    .brand img {
-        width: 145px;
-        max-height: 65px;
-    }
-
-    .nav-wrap {
-        min-height: 72px;
-    }
 }
