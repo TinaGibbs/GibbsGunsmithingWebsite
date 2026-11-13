@@ -73,48 +73,59 @@ h1 span { color: #75aef0; }
 .service-card li { padding: 3px 0; }
 .service-card li::marker { color: var(--red); }
 
-/* Optics feature: equal image panels left and right, copy centered. */
+/* Optics & Accuracy: hunter | centered copy | target */
 .feature-section {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr) minmax(0, 1fr);
   grid-template-areas: "photo copy target";
   align-items: stretch;
-  background: var(--ink);
-  color: white;
   width: 100%;
   overflow: hidden;
+  background: var(--ink);
+  color: var(--white);
 }
 
 .feature-photo {
   grid-area: photo;
-  width: 100%;
+  min-width: 0;
   height: 420px;
-  min-height: 420px;
-  background: url("hunter.png") center / cover no-repeat;
+  overflow: hidden;
+}
+
+.feature-photo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
 }
 
 .feature-content {
   grid-area: copy;
-  align-self: stretch;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-self: stretch;
   min-width: 0;
-  padding: 45px clamp(24px, 3vw, 48px);
+  padding: 42px clamp(22px, 3vw, 48px);
   text-align: center;
 }
 
-.feature-content h2 { font-size: clamp(2.2rem, 3.4vw, 3.5rem); }
-.feature-content p:last-child { color: #c6c7c9; }
+.feature-content h2 {
+  margin-bottom: 22px;
+  font-size: clamp(2.4rem, 3.4vw, 3.5rem);
+}
+
+.feature-content p:last-child {
+  margin-bottom: 0;
+  color: #c6c7c9;
+}
 
 .feature-target {
   grid-area: target;
-  display: flex;
-  width: 100%;
-  height: 420px;
   min-width: 0;
-  min-height: 420px;
-  padding: 0;
+  height: 420px;
   overflow: hidden;
 }
 
@@ -122,7 +133,6 @@ h1 span { color: #75aef0; }
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 0;
   max-width: none;
   object-fit: cover;
   object-position: center;
@@ -169,8 +179,7 @@ h1 span { color: #75aef0; }
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "photo" "copy" "target";
   }
-  .feature-photo, .feature-target { width: 100%; height: 300px; min-height: 300px; }
-  .feature-target img { width: 100%; height: 100%; min-height: 0; }
+  .feature-photo, .feature-target { width: 100%; height: 300px; }
   .feature-content { padding: 45px 9%; }
   .options-grid { gap: 22px; }
   .contact-wrap { gap: 40px; }
@@ -200,8 +209,7 @@ h1 span { color: #75aef0; }
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas: "photo" "copy" "target";
   }
-  .feature-photo, .feature-target { width: 100%; height: 240px; min-height: 240px; }
-  .feature-target img { width: 100%; height: 100%; min-height: 0; }
+  .feature-photo, .feature-target { width: 100%; height: 240px; }
   .feature-content { padding: 42px 24px; }
   .range-section { grid-template-columns: 1fr; }
   .range-photo, .range-photo img { min-height: 280px; max-height: 360px; }
