@@ -224,3 +224,49 @@ h1 span { color: #75aef0; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+/* ==========================================
+   HEADER LOGO — LARGER DESKTOP DISPLAY - UPDATE
+   ========================================== */
+
+.brand {
+    flex-shrink: 0;
+}
+
+.brand img {
+    width: 220px;
+    max-height: 78px;
+    object-fit: contain;
+}
+
+.nav-wrap {
+    min-height: 94px;
+}
+
+.primary-nav {
+    gap: clamp(16px, 2.2vw, 30px);
+}
+
+/* Slightly smaller logo on tablets */
+@media (max-width: 900px) {
+    .brand img {
+        width: 190px;
+        max-height: 70px;
+    }
+
+    .nav-wrap {
+        min-height: 86px;
+    }
+}
+
+/* Preserve existing mobile logo sizing */
+@media (max-width: 680px) {
+    .brand img {
+        width: 145px;
+        max-height: 65px;
+    }
+
+    .nav-wrap {
+        min-height: 72px;
+    }
+}
